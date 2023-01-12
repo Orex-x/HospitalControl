@@ -63,8 +63,14 @@ public class HomeController : Controller
         return model; 
     }
     
-    public async Task ExportData() => await _db.Database.ExecuteSqlRawAsync("call BackupCSV();");
-    
+    public async Task ExportData()
+    {
+        const string dirName = @"C:\tmp\csv";
+        if (!Directory.Exists(dirName)) Directory.CreateDirectory(@"C:\tmp\csv");
+        
+        await _db.Database.ExecuteSqlRawAsync("call BackupCSV();");
+    }
+
     public ViewResult Backup()
      {
          var list = new List<string>();

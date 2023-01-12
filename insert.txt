@@ -1,0 +1,1116 @@
+--patient
+INSERT INTO public."Users"("Login", "Password") VALUES ('login1', '123');
+INSERT INTO public."Users"("Login", "Password") VALUES ('login2', '123');
+INSERT INTO public."Users"("Login", "Password") VALUES ('login3', '123');
+--doctors
+INSERT INTO public."Users"("Login", "Password") VALUES ('login4', '123');
+INSERT INTO public."Users"("Login", "Password") VALUES ('login5', '123');
+INSERT INTO public."Users"("Login", "Password") VALUES ('login6', '123');
+INSERT INTO public."Users"("Login", "Password") VALUES ('login7', '123');
+INSERT INTO public."Users"("Login", "Password") VALUES ('login8', '123');
+INSERT INTO public."Users"("Login", "Password") VALUES ('login9', '123');
+
+INSERT INTO public."DoctorTypes"("Title") VALUES ('Врач-генетик');
+INSERT INTO public."DoctorTypes"("Title") VALUES ('Нарколог');
+INSERT INTO public."DoctorTypes"("Title") VALUES ('Флеболог');
+INSERT INTO public."DoctorTypes"("Title") VALUES ('Нефролог');
+INSERT INTO public."DoctorTypes"("Title") VALUES ('Гепатолог');
+INSERT INTO public."DoctorTypes"("Title") VALUES ('Детский врач');
+
+
+INSERT INTO public."Patients"
+("Name", "MiddleName", "LastName", "Policy", "Registration", "UserId") VALUES 
+('Алан', 'Тимофеев', 'Лаврентьевич', '8733474694837465', 'г. Москва ул. Каштановая д. 123 кв 321', 1);
+
+INSERT INTO public."Patients"
+("Name", "MiddleName", "LastName", "Policy", "Registration", "UserId") VALUES 
+('Аким', 'Андреев', 'Яковлевич', '8733474691237465', 'г. Москва ул. Каштановая д. 456 кв 32', 2);
+
+INSERT INTO public."Patients"
+("Name", "MiddleName", "LastName", "Policy", "Registration", "UserId") VALUES 
+('Ефим', 'Комиссаров', 'Георгьевич', '8733123694837465', 'г. Москва ул. Каштановая д. 22 кв 64', 3);
+
+
+INSERT INTO public."Doctors"
+("Name", "MiddleName", "LastName", "Phone", "Experience", "DoctorTypeId", "UserId") VALUES
+('Михаил', 'Никифоров', 'Вениаминович', '88005553131', 12, 1, 4);
+
+INSERT INTO public."Doctors"
+("Name", "MiddleName", "LastName", "Phone", "Experience", "DoctorTypeId", "UserId") VALUES
+('Миронов', 'Корней', 'Мартынович', '88005553232', 11, 2, 5);
+
+INSERT INTO public."Doctors"
+("Name", "MiddleName", "LastName", "Phone", "Experience", "DoctorTypeId", "UserId") VALUES
+('Мстислав', 'Рожков', 'Даниилович', '88005553333', 4, 3, 6);
+
+INSERT INTO public."Doctors"
+("Name", "MiddleName", "LastName", "Phone", "Experience", "DoctorTypeId", "UserId") VALUES
+('Рудольф', 'Ларионов', 'Вячеславович', '88005553434', 6, 4, 7);
+
+INSERT INTO public."Doctors"
+("Name", "MiddleName", "LastName", "Phone", "Experience", "DoctorTypeId", "UserId") VALUES
+('Авраам', 'Корнилов', 'Игоревич', '8800555535', 2, 5, 8);
+
+INSERT INTO public."Doctors"
+("Name", "MiddleName", "LastName", "Phone", "Experience", "DoctorTypeId", "UserId") VALUES
+('Пантелей', 'Степанов', 'Анатольевич', '88005553636', 10, 6, 9);
+
+INSERT INTO public."MedicalServices"
+("Title", "Description", "Price", "PatientId") VALUES 
+('лечение зуба', 'поставить пломбу', 12000, 1);
+	
+INSERT INTO public."MedicalServices"
+("Title", "Description", "Price", "PatientId") VALUES 
+('лечение зуба', 'вырвать корень', 8000, 1);
+
+INSERT INTO public."MedicalServices"
+("Title", "Description", "Price", "PatientId") VALUES 
+('лечение зуба', 'поставить пломбу', 12000, 1);
+
+INSERT INTO public."MedicalServices"
+("Title", "Description", "Price", "PatientId") VALUES 
+('лечение зуба', 'вырвать корень', 8000, 1);
+
+
+
+INSERT INTO public."MedicalServices"
+("Title", "Description", "Price", "PatientId") VALUES 
+('лечение носа', 'промыть нос', 3000, 2);
+
+INSERT INTO public."MedicalServices"
+("Title", "Description", "Price", "PatientId") VALUES 
+('лечение носа', 'исправление перегородки', 20000, 2);
+
+INSERT INTO public."MedicalServices"
+("Title", "Description", "Price", "PatientId") VALUES 
+('лечение носа', 'промыть нос', 4000, 2);
+
+INSERT INTO public."MedicalServices"
+("Title", "Description", "Price", "PatientId") VALUES 
+('лечение носа', 'исправление перегородки', 19000, 2);
+
+
+
+INSERT INTO public."MedicalServices"
+("Title", "Description", "Price", "PatientId") VALUES 
+('лечение глаза', 'вытащить инородный объект', 2000, 3);
+
+INSERT INTO public."MedicalServices"
+("Title", "Description", "Price", "PatientId") VALUES 
+('лечение глаза', 'вытащить инородный объект', 2000, 3);
+
+INSERT INTO public."MedicalServices"
+("Title", "Description", "Price", "PatientId") VALUES 
+('лечение глаза', 'промыть глаз', 4500, 3);
+
+INSERT INTO public."MedicalServices"
+("Title", "Description", "Price", "PatientId") VALUES 
+('лечение глаза', 'промыть глаз', 4500, 3);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.01.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.01.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.01.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.01.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.01.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.01.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.01.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.01.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.01.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.01.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.01.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.01.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.01.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.01.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.01.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.02.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.03.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.03.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.03.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.03.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.03.2023', 1, 1);
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.03.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.03.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.03.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.03.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.03.2023', 1, 1);
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.03.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.03.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.03.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.03.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.03.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.04.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.04.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.04.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.04.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.04.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.04.2023', 1, 1);
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.04.2023', 1, 1);
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.04.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.04.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.04.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.04.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.04.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.04.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.04.2023', 1, 1);
+
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.05.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.05.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.05.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.05.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.05.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.05.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.05.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.05.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.05.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.05.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.05.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.05.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.05.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.06.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.06.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.06.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.06.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.06.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.06.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.06.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.06.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.06.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.06.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.06.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.06.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.06.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.06.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.06.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.06.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.06.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.06.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.06.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.07.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.08.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.09.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.10.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.11.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+INSERT INTO public."Records"
+("Status", "DateTime", "DoctorId", "PatientId") VALUES 
+(1, '02.12.2023', 1, 1);
+
+
+
+
+	
+
+
+
+
+
+
+
+

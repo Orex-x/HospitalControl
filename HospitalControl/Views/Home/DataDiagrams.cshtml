@@ -5,28 +5,24 @@
 }
 
 <div>
-  <canvas id="BarChart" height="200" width="200"></canvas>
-  <canvas id="DoughnutChart" height="200" width="200"></canvas>
-  <canvas id="LineChart" height="200" width="200"></canvas>
+  <h1>Цены за услуги</h1><br/>
+  <canvas id="BarChart" max-height="100" max-width="100"></canvas>
+  <h1>Количество записей в разные месяца года</h1><br/>
+  <canvas id="LineChart" height="100" width="100"></canvas>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
   const barCTX = document.getElementById('BarChart');
-  
-  const doughnutCTX = document.getElementById('DoughnutChart');
-  
+    
   const lineCTX = document.getElementById('LineChart');
 
   var BarLabels = [];
   var BarData = [];
   
-  var DoughnutLabels = [];
-  var DoughnutData = [];
-  
-  var LineLabels = [];
-  var LineData = ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"];
+  var LineLabels = ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"];
+  var LineData = [];
   
   @if (Model.BarLabels.Count == Model.BarData.Count)
   {
@@ -40,6 +36,11 @@
     {
       @:BarData.push(@i);
     }
+    
+    foreach (var i in Model.LineData)
+    {
+      @:LineData.push(@i);
+    }
   }
   
   new Chart(barCTX, {
@@ -47,7 +48,7 @@
     data: {
       labels: BarLabels,
       datasets: [{
-        label: '# of Votes',
+        label: 'Медецинская услуга',
         data: BarData,
         borderWidth: 1
       }]
@@ -61,33 +62,20 @@
     }
   });
   
-    new Chart(doughnutCTX, {
-      type: 'doughnut',
-      data: {
-       labels: DoughnutLabels,
-        datasets: [{
-          label: '# of Votes',
-          data: DoughnutData,
-          
-           hoverOffset: 4
-        }]
-      }
-    });
-    
-       new Chart(lineCTX, {
-          type: 'line',
-          data: {
-           labels: LineLabels,
-            datasets: [{
-              label: '# of Votes',
-              data: LineData,
-              
-               hoverOffset: 4
-            }]
-          },
-           fill: false,
-           borderColor: 'rgb(75, 192, 192)',
-           tension: 0.1
-        });
+  new Chart(lineCTX, {
+    type: 'line',
+    data: {
+     labels: LineLabels,
+      datasets: [{
+        label: 'Количество записей',
+        data: LineData,
+        
+         hoverOffset: 4
+      }]
+    },
+     fill: false,
+     borderColor: 'rgb(75, 192, 192)',
+     tension: 0.1
+  });
 </script>
 
