@@ -31,16 +31,35 @@ public class HomeController : Controller
     {
         var model = new DataChartViewModel();
         
-            var labels = _db.MedicalServices.Select(x => x.Title).ToList();
-            var prices = _db.MedicalServices.Select(x => x.Price).ToList();
-
-            /*model.Labels = labels;
-            model.Data = prices;*/
-
-            model.Labels = new List<string>() { "фыв", "фыв", "v" };
-            model.Data = new List<int>() { 50000, 100000, 20000 };
-
+        //Bar - просмотр цен между услугами
+        var barLabels = _db.MedicalServices.Select(x => x.Title).ToList();
+        var barPrices = _db.MedicalServices.Select(x => x.Price).ToList();
+        
+        
+        //Line - количество записей в разные месяца года
+        var records = _db.Records.ToList();
        
+        var lineData = new List<int>()
+        {
+            records.Count(x => x.DateTime.Month == 1),
+            records.Count(x => x.DateTime.Month == 2),
+            records.Count(x => x.DateTime.Month == 3),
+            records.Count(x => x.DateTime.Month == 4),
+            records.Count(x => x.DateTime.Month == 5),
+            records.Count(x => x.DateTime.Month == 6),
+            records.Count(x => x.DateTime.Month == 7),
+            records.Count(x => x.DateTime.Month == 8),
+            records.Count(x => x.DateTime.Month == 9),
+            records.Count(x => x.DateTime.Month == 10),
+            records.Count(x => x.DateTime.Month == 11),
+            records.Count(x => x.DateTime.Month == 12),
+        };
+        
+        
+        model.BarLabels = barLabels;
+        model.BarData = barPrices;
+
+        model.LineData = lineData;
         return model; 
     }
     

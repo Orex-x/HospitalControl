@@ -14,7 +14,6 @@ public class Patient
     public string Registration { get; set; }
 
     public User User { get; set; }
-
     public virtual ICollection<MedicalService> MedicalServices { get; set; } = new List<MedicalService>();
     public virtual ICollection<Drug> Drugs { get; set; } = new List<Drug>();
 }

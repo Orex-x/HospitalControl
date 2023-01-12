@@ -2,6 +2,9 @@
 
 public class DataChartViewModel
 {
-    public List<string> Labels { get; set; }
-    public List<int> Data { get; set; }
+    public List<string> BarLabels { get; set; }
+    public List<int> BarData { get; set; }
+    
+    
+    public List<int> LineData { get; set; }
 }
