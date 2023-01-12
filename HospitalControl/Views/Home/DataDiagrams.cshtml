@@ -1,0 +1,52 @@
+﻿@model DataChartViewModel;
+
+@{
+    Layout = "_Layout";
+}
+
+<div>
+  <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  var Labels = [];
+  var Data = [];
+  
+  @if (Model.Labels.Count == Model.Data.Count)
+  {
+    foreach (var i in Model.Labels)
+    {
+      @:Labels.push('@Html.Raw(i)');
+      
+    }
+    
+    foreach (var i in Model.Data)
+    {
+      @:Data.push(@i);
+    }
+  }
+  
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: Labels,
+      datasets: [{
+        label: '# of Votes',
+        data: Data,
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+

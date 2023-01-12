@@ -1,0 +1,54 @@
+﻿@model List<String>
+
+@{
+    Layout = "_Layout";
+}
+
+<div>
+    <table>
+        <tr> 
+            <td>
+                <form asp-action="Dump" asp-controller="Home" asp-anti-forgery="true">
+                    <div>
+                        <input type="submit" value="Сгрузить"/>
+                    </div>
+                </form>
+            </td>
+            <td>
+                <form asp-action="ExportData" asp-controller="Home" asp-anti-forgery="true">
+                    <div>
+                        @*<input type="file" webkitdirectory="true"  value="выбор каталога" />*@
+                        <input type="submit" value="Экспортировать данные в csv файлы"/>
+                    </div>
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<table class="table">
+    <thead class="thead-dark">
+    <tr>
+        <th scope="col">Название файла</th>
+        <th scope="col">Действие</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach(var value in Model)
+    {
+        <tr>
+            <td>
+                <li>       
+                    <a asp-route-name="@value" >@value</a>
+                </li>
+            </td>
+            <td>
+                <a asp-action="Restore" asp-route-name="@value" asp-controller="Home">
+                    <button>Восстанавить</button> 
+                </a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
